@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import { generateAIResponse } from "@/lib/gemini";
 
 // Check if API key is configured
-if (!process.env.GEMINI_API_KEY) {
-  throw new Error("Missing GEMINI_API_KEY environment variable");
+if (!process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
+  throw new Error("Missing NEXT_PUBLIC_GEMINI_API_KEY environment variable");
 }
 
 export async function POST(req: Request) {
